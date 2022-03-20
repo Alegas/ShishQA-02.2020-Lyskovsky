@@ -31,8 +31,8 @@ public class PageTest extends PageObjects {
 
         /*String card_number = "4000000000000085";
         String secure="3-D secure version 2, сhallenge flow, full authentication\t";
-        String status="Payment has CONFIRMED status";
-*/
+        String status="Payment has CONFIRMED status";*/
+
             String cardHolder = "Test Test"; //ИМЯ ДЕРЖАТЕЛЯ КАРТЫ
 
             //ПОЛУЧЕНИЕ ЭЛЕМЕНТОВ СТРАНИЦЫ ВВОДА ДАННЫХ
