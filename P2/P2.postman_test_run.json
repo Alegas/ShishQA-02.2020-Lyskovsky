@@ -1,0 +1,244 @@
+{
+	"id": "25c2cdd7-52a1-4bff-845f-ab551ecc65db",
+	"name": "P2",
+	"timestamp": "2022-03-22T06:12:45.500Z",
+	"collection_id": "19606836-e8a8702d-f811-43d2-9e22-5233f1dfb7fd",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 9,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "f59c47d1-cee7-458e-a696-d30b7e22fb66",
+			"name": "P2.2",
+			"url": "https://author.today/",
+			"time": 849,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				849
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "01a71fed-d77b-4605-b2da-153c183e783c",
+			"name": "Progect list",
+			"url": "http://89.223.126.182:8080/api/admin/projects?fields=id,name,shortName",
+			"time": 64,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"setProjectIdVariable": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"setProjectIdVariable": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				64
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"setProjectIdVariable": true
+				}
+			]
+		},
+		{
+			"id": "0908c3c4-98d2-477d-bf00-a836fb8843d6",
+			"name": "P2.3.1",
+			"url": "http://89.223.126.182:8080/api/issues/",
+			"time": 181,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				181
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "292c92a9-10bf-4d98-ac59-fa3e1b4c3a24",
+			"name": "P2.3.2",
+			"url": "http://89.223.126.182:8080/api/issues/",
+			"time": 140,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"setIssueIdVariable": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"setIssueIdVariable": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				140
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"setIssueIdVariable": true
+				}
+			]
+		},
+		{
+			"id": "b2e369f4-ff31-4bd4-8eae-76aba361f2be",
+			"name": "P2.3.3",
+			"url": "http://89.223.126.182:8080/api/issues/2-325?fields=$type,id,summary,description,customFields($type,id,projectCustomField($type,id,field($type,id,name)),value($type,avatarUrl,buildLink,color(id),fullName,id,isResolved,localizedName,login,minutes,name,presentation,text))",
+			"time": 54,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"test 1": true,
+				"test 2": false,
+				"test 3": true,
+				"Set fields variables values": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"test 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"test 2": {
+					"pass": 0,
+					"fail": 1
+				},
+				"test 3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Set fields variables values": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"test 1": true,
+					"test 2": false,
+					"test 3": true,
+					"Set fields variables values": true
+				}
+			]
+		},
+		{
+			"id": "a2c65bcb-9efe-4b5d-890d-9c3717f9c046",
+			"name": "State list",
+			"url": "http://89.223.126.182:8080/api/admin/projects/0-4/customFields/107-30?fields=bundle(values(id,name,$type),aggregatedUsers(id,name,$type))",
+			"time": 57,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Set New Issue state values": true
+			},
+			"testPassFailCounts": {
+				"Set New Issue state values": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				57
+			],
+			"allTests": [
+				{
+					"Set New Issue state values": true
+				}
+			]
+		},
+		{
+			"id": "9c7e565c-b270-4d26-8194-d5889fd5246c",
+			"name": "P2.3.4",
+			"url": "http://89.223.126.182:8080/api/issues/2-325?fields=customFields(id,name,value(avatarUrl,buildLink,color(id),fullName,id,isResolved,localizedName,login,minutes,name,presentation,text))",
+			"time": 105,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				105
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1450,
+	"collection": {
+		"requests": [
+			{
+				"id": "f59c47d1-cee7-458e-a696-d30b7e22fb66",
+				"method": "GET"
+			},
+			{
+				"id": "01a71fed-d77b-4605-b2da-153c183e783c",
+				"method": "GET"
+			},
+			{
+				"id": "0908c3c4-98d2-477d-bf00-a836fb8843d6",
+				"method": "POST"
+			},
+			{
+				"id": "292c92a9-10bf-4d98-ac59-fa3e1b4c3a24",
+				"method": "POST"
+			},
+			{
+				"id": "b2e369f4-ff31-4bd4-8eae-76aba361f2be",
+				"method": "GET"
+			},
+			{
+				"id": "a2c65bcb-9efe-4b5d-890d-9c3717f9c046",
+				"method": "GET"
+			},
+			{
+				"id": "9c7e565c-b270-4d26-8194-d5889fd5246c",
+				"method": "POST"
+			}
+		]
+	}
+}
