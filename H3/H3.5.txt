@@ -1,0 +1,41 @@
+1
+SELECT COUNT (*)
+FROM Customers
+WHERE Country = "Germany";
+
+
+2
+SELECT * 
+FROM Customers
+WHERE CustomerName LIKE '%e';
+
+3
+INSERT INTO Customers (CustomerName, ContactName, City, Country)
+VALUES ('Alegas', 'Oleg Lyskovsky', 'Novosibirsk', 'Russia');
+
+SELECT * FROM [Customers]
+Where ContactName = 'Oleg Lyskovsky';
+
+
+4
+UPDATE Customers
+SET CustomerName ='O.L.A'
+Where ContactName = 'Oleg Lyskovsky';
+
+SELECT * FROM [Customers]
+Where ContactName = 'Oleg Lyskovsky';
+
+
+5
+DELETE FROM Customers 
+WHERE City = 'Nantes'
+
+SELECT * FROM [Customers]
+Where City = 'Nantes';
+
+
+6
+SELECT Orders.OrderID, Employees.FirstName
+FROM Orders
+INNER JOIN (SELECT * FROM Employees where FirstName = 'Steven') 
+Employees ON Orders.EmployeeID = Employees.EmployeeID;
