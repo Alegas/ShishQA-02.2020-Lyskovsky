@@ -39,70 +39,63 @@ public class P3{
 
     @Test
     public void CardTest1() throws Exception {
-        CardTestForm1(1);
+        CardTestForm(1,1);
     }
 
     @Test
     public void CardTest2() throws Exception {
-        CardTestForm1(2);
+        CardTestForm(2,1);
     }
 
     @Test
     public void CardTest3() throws Exception {
-        CardTestForm1(3);
+        CardTestForm(3,1);
     }
 
     @Test
     public void CardTest4() throws Exception {
-        CardTestForm2(4);
+        CardTestForm(4,3);
     }
 
     @Test
     public void CardTest5() throws Exception {
-        CardTestForm2(5);
+        CardTestForm(5,3);
     }
 
     @Test
     public void CardTest6() throws Exception {
-        CardTestForm2(6);
+        CardTestForm(6,3);
     }
 
-    @Test
+    /*@Test
     public void CardTest7() throws Exception {
-        CardTestForm2(7);
+        CardTestForm(7,2);
     }
-
+    */
     @Test
     public void CardTest8() throws Exception {
-        CardTestForm2(8);
+        CardTestForm(8,3);
     }
 
     @Test
     public void CardTest9() throws Exception {
-        CardTestForm2(9);
+        CardTestForm(9,3);
     }
 
     @Test
     public void CardTest10() throws Exception {
-        CardTestForm2(10);
+        CardTestForm(10,3);
     }
 
 
-
-    private void CardTestForm1(int n){
+    private void CardTestForm(int n,int index){
         driver.get(baseUrl);
         FillCard(Cards[n-1][0]);
         FillForm();
         driver.findElement(By.id("action-submit")).click();
-        driver.findElement(By.id("success")).click();
-        assertEquals(Cards[n-1][1], driver.findElement(By.xpath("//div[@id='payment-status-title']/span")).getText());
-        assertEquals("Payment Details:", driver.findElement(By.xpath("//section[@id='payment-details']/h2")).getText());
-    }
-    private void CardTestForm2(int n){
-        driver.get(baseUrl);
-        FillCard(Cards[n-1][0]);
-        FillForm();
-        driver.findElement(By.id("action-submit")).click();
+        if (index == 1) {driver.findElement(By.id("success")).click();}
+        if (index == 2) {driver.findElement(By.id("successButton")).click();}
+
         assertEquals(Cards[n-1][1], driver.findElement(By.xpath("//div[@id='payment-status-title']/span")).getText());
         assertEquals("Payment Details:", driver.findElement(By.xpath("//section[@id='payment-details']/h2")).getText());
     }
